@@ -7,14 +7,14 @@
 #define SUCCESS 0
 #define FAILURE -1
 
-int  test_pool(int element_size, int block_size)
+int  test_pool(int element_size, int element_cnt)
 {
 	pool pool_ptr;
 	int *test_ptr1 = NULL;
 	int *test_ptr2 = NULL;
 	
 	/* init memory pool with given parameters */
-	poolInitialize(&pool_ptr, element_size, block_size);
+	poolInitialize(&pool_ptr, element_size, element_cnt);
 	
 	/* allocate memory from memory pool */
 	test_ptr1 = poolMalloc(&pool_ptr);
