@@ -8,7 +8,7 @@ doc in progress
 typedef struct {
 	uint32_t elementSize; // memory size of one element
 	uint32_t elementCnt; // blockSize
-	uint32_t ; // Used what? <- used 
+	uint32_t nowElementIdx; // Used what? <- used 
 	int32_t nowBlockIdx; //index of using block / present block <- block (what block?)
 	poolFreed *freeList; // <- freed
 	uint32_t blockListCnt; // size of blocks, or count.
@@ -33,6 +33,7 @@ typedef struct {
 
 The distinction between 'size' and 'count' is unclear.<br>
 I used `size` as memory size (byte), `cnt` is for **max count** or **size** in a general sense. <br>
+And `now` is for **now using data**.
 If you don't like it, please change it on your own.
 
 ## How to use?
